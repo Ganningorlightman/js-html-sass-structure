@@ -1,0 +1,45 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "no-var": 2,
+    "semi": 1,
+    "no-debugger": 2,
+    "no-console": 1,
+    "new-cap": 0,
+    "strict": 0,
+    "prefer-const": 2,
+    "no-underscore-dangle": 0,
+    "no-use-before-define": 0,
+    "prefer-template": 2,
+    "no-return-await": 2,
+    "no-unused-vars": 2,
+    "eol-last": 0,
+    "max-len": [2, { "code": 120 }],
+    "default-param-last": 2,
+    "no-multi-spaces": 2,
+    "arrow-parens": [2, "as-needed"],
+    "arrow-body-style": [2, "as-needed"],
+    "operator-linebreak": [2, "before"],
+    "no-confusing-arrow": 0,
+    "newline-per-chained-call": 0,
+    "no-multiple-empty-lines": 2,
+    "comma-dangle": 0,
+    "quotes": 0,
+    "require-jsdoc": 0,
+    "object-curly-spacing": [2, "always"],
+    "indent": [
+      2,
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ]
+  }
+}

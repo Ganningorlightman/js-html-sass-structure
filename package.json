@@ -1,11 +1,11 @@
 {
-  "name": "html-sass-js-structure",
+  "name": "js-html-sass-structure",
   "version": "0.0.1",
   "description": "Pure JavaScript Application",
   "main": "webpack.config.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ganningorlightman/html-sass-js-structure"
+    "url": "https://github.com/Ganningorlightman/js-html-sass-structure"
   },
   "author": "Aleksei Ivanin <ganningorlightman@gmail.com>",
   "license": "MIT",
@@ -15,9 +15,9 @@
     "javascript"
   ],
   "bugs": {
-    "url": "https://github.com/Ganningorlightman/html-sass-js-structure/issues"
+    "url": "https://github.com/Ganningorlightman/js-html-sass-structure/issues"
   },
-  "homepage": "https://github.com/Ganningorlightman/html-sass-js-structure#readme",
+  "homepage": "https://github.com/Ganningorlightman/js-html-sass-structure#readme",
   "engines": {
     "npm": "6.14.8",
     "node": "14.15.1"
@@ -29,6 +29,7 @@
   "browserslist": "> 0.25%, not dead",
   "devDependencies": {
     "@babel/core": "^7.12.10",
+	"@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",

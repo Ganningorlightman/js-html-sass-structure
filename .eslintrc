@@ -31,7 +31,7 @@
     "newline-per-chained-call": 0,
     "no-multiple-empty-lines": 2,
     "comma-dangle": 0,
-    "quotes": 0,
+    "quotes": [2, "double"],
     "require-jsdoc": 0,
     "object-curly-spacing": [2, "always"],
     "indent": [

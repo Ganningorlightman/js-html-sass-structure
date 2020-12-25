@@ -33,10 +33,11 @@ module.exports = {
         path: path.resolve(__dirname, "build")
     },
     resolve: {
+        modules: ["node_modules", path.resolve(__dirname, "src")],
         extensions: [".js"],
         alias: {
             "@": path.resolve(__dirname, "src"),
-            "@core": path.resolve(__dirname, "src/core")
+            "core": path.resolve(__dirname, "src/core")
         }
     },
     devtool: isDev ? "source-map" : false,

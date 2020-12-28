@@ -8,6 +8,7 @@
     "jest": true
   },
   "rules": {
+    "linebreak-style": 0,
     "no-var": 2,
     "semi": 1,
     "no-debugger": 2,

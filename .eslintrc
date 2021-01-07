@@ -12,7 +12,7 @@
     "no-var": 2,
     "semi": 1,
     "no-debugger": 2,
-    "no-console": 1,
+    "no-console": [1, { "allow": ["warn", "error"] }],
     "new-cap": 0,
     "strict": 0,
     "prefer-const": 2,

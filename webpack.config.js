@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isProd = process.env.NODE_ENV === "production";
 const isDev = !isProd;
-const filename = ext => isProd ? `bundle.[name]-[hash].${ext}` : `bundle.[name].${ext}`;
+const filename = ext => isDev ? `[name].${ext}` : `[name].bundle.[hash].${ext}`;
 
 const jsLoaders = () => {
     const loaders = ["babel-loader"];
@@ -23,7 +23,8 @@ module.exports = {
     entry: ["@babel/polyfill", "./index.js"],
     output: {
         filename: filename("js"),
-        path: path.resolve(__dirname, "build")
+        path: path.resolve(__dirname, "build"),
+        publicPath: "/"
     },
     resolve: {
         modules: ["node_modules", path.resolve(__dirname, "src")],
@@ -37,13 +38,15 @@ module.exports = {
     target: isDev ? "web" : "browserslist",
     devServer: {
         port: 6969,
-        hot: isDev,
-        open: isDev,
+        hot: true,
+        open: true,
         writeToDisk: true,
+        compress: true,
+        historyApiFallback: true,
+        contentBase: path.resolve(__dirname, "build"),
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
         new HTMLWebpackPlugin({
             template: "index.html",
             filename: "index.html",
@@ -80,7 +83,8 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin(),
     ],
     module: {
         rules: [
